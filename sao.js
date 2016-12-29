@@ -22,12 +22,11 @@ module.exports = {
   skipInterpolation: [
     'template/**'
   ],
-  post({chalk, isNewFolder, folderName}) {
-    console.log(`\n  ${chalk.green('done!')}`)
+  post({chalk, isNewFolder, folderName, log}) {
     if (isNewFolder) {
-      console.log(`  cd ${chalk.yellow(folderName)} to get started!\n`)
+      log.success(`cd ${chalk.yellow(folderName)} to get started!`)
     } else {
-      console.log()
+      log.success('Done!')
     }
   }
 }
