@@ -22,7 +22,11 @@ module.exports = {
   skipInterpolation: [
     'template/**'
   ],
-  post({chalk, isNewFolder, folderName, log}) {
+  post({chalk, isNewFolder, folderName, log, install, init}) {
+    // install modules
+    install()
+    // run git init
+    init()
     if (isNewFolder) {
       log.success(`cd ${chalk.yellow(folderName)} to get started!`)
     } else {
