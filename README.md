@@ -18,10 +18,8 @@ sao egoist/template-template
 ### From npm
 
 ```bash
-sao template --install
+sao template
 ```
-
-You don't need `--install` when you've run this once.
 
 ## License
 
