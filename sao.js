@@ -4,7 +4,8 @@ module.exports = {
   prompts: {
     name: {
       message: 'What is the name of the new template?',
-      role: 'folder:name'
+      role: 'folder:name',
+      filter: val => val.toLowerCase()
     },
     description: {
       message: 'How would you descripe the new template?',
@@ -12,7 +13,8 @@ module.exports = {
     },
     username: {
       message: 'What is your GitHub username?',
-      role: 'git:name'
+      role: 'git:name',
+      filter: val => val.toLowerCase()
     },
     email: {
       message: 'What is your GitHub email?',
