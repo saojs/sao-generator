@@ -1,6 +1,6 @@
 # <%= name %>
 
-> <%= _.description %>
+> <%= description %>
 
 ## License
 
