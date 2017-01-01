@@ -6,7 +6,7 @@
     "url": "<%= username %>/<%= name %>",
     "type": "git"
   },
-  "author": "<%= username %> <<%= email %>>",
+  "author": "<%= username %> <<%= email %>> (<%= website %>)",
   "license": "MIT",
   "files": [
     "sao.js",

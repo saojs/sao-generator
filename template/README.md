@@ -20,4 +20,4 @@ sao <%= name.replace('template-', '') %>
 
 ## License
 
-MIT &copy; <%= username %>
+MIT &copy; [<%= username %>](<%= website %>)

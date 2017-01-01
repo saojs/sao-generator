@@ -12,19 +12,26 @@ module.exports = {
     },
     username: {
       message: 'What is your GitHub username?',
-      role: 'git:name'
+      role: 'git:name',
+      store: true
     },
     email: {
       message: 'What is your GitHub email?',
-      role: 'git:email'
+      role: 'git:email',
+      store: true
+    },
+    website: {
+      message: 'The URL of your website?',
+      default({username}) {
+        return `github.com/${username}`
+      },
+      store: true
     }
   },
-  post({chalk, isNewFolder, folderName}) {
-    console.log(`\n  ${chalk.green('done!')}`)
+  post({log, chalk, isNewFolder, folderName}) {
+    log.success('Done!')
     if (isNewFolder) {
-      console.log(`  cd ${chalk.yellow(folderName)} to get started!\n`)
-    } else {
-      console.log()
+      log.info(`cd ${chalk.yellow(folderName)} to get started!`)
     }
   }
 }

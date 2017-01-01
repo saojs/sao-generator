@@ -3,7 +3,7 @@ const superb = require('superb')
 module.exports = {
   prompts: {
     name: {
-      message: 'What is the name of the new template?',
+      message: 'What is the name of the new template (better be template-*)?',
       role: 'folder:name',
       filter: val => val.toLowerCase()
     },
@@ -14,11 +14,20 @@ module.exports = {
     username: {
       message: 'What is your GitHub username?',
       role: 'git:name',
-      filter: val => val.toLowerCase()
+      filter: val => val.toLowerCase(),
+      store: true
     },
     email: {
       message: 'What is your GitHub email?',
-      role: 'git:email'
+      role: 'git:email',
+      store: true
+    },
+    website: {
+      message: 'The URL of your website?',
+      default({username}) {
+        return `github.com/${username}`
+      },
+      store: true
     }
   },
   skipInterpolation: [
