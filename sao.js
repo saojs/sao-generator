@@ -4,7 +4,7 @@ module.exports = {
   prompts: {
     name: {
       message: 'What is the name of the new template (better be template-*)?',
-      role: 'folder:name',
+      default: ':folderName:',
       filter: val => val.toLowerCase()
     },
     description: {
@@ -13,13 +13,13 @@ module.exports = {
     },
     username: {
       message: 'What is your GitHub username?',
-      role: 'git:name',
+      default: ':gitUser:',
       filter: val => val.toLowerCase(),
       store: true
     },
     email: {
       message: 'What is your GitHub email?',
-      role: 'git:email',
+      default: ':gitEmail:',
       store: true
     },
     website: {
@@ -33,15 +33,10 @@ module.exports = {
   skipInterpolation: [
     'template/**'
   ],
-  post({chalk, isNewFolder, folderName, log, install, init}) {
-    // install modules
-    install()
-    // run git init
-    init()
-    if (isNewFolder) {
-      log.success(`cd ${chalk.yellow(folderName)} to get started!`)
-    } else {
-      log.success('Done!')
-    }
-  }
+  move: {
+    'gitignore': '.gitignore'
+  },
+  showTip: true,
+  gitInit: true,
+  installDependencies: true
 }

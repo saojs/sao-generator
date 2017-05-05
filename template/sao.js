@@ -28,10 +28,7 @@ module.exports = {
       store: true
     }
   },
-  post({log, chalk, isNewFolder, folderName}) {
-    log.success('Done!')
-    if (isNewFolder) {
-      log.info(`cd ${chalk.yellow(folderName)} to get started!`)
-    }
-  }
+  showTip: true,
+  gitInit: true,
+  installDependencies: true
 }
