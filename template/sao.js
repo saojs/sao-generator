@@ -4,7 +4,7 @@ module.exports = {
   prompts: {
     name: {
       message: 'What is the name of the new project?',
-      role: 'folder:name'
+      default: ':folderName:'
     },
     description: {
       message: 'How would you descripe the new project?',
@@ -12,12 +12,12 @@ module.exports = {
     },
     username: {
       message: 'What is your GitHub username?',
-      role: 'git:name',
+      default: ':gitUser:',
       store: true
     },
     email: {
       message: 'What is your GitHub email?',
-      role: 'git:email',
+      default: ':gitEmail:',
       store: true
     },
     website: {
