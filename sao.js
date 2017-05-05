@@ -34,7 +34,8 @@ module.exports = {
     'template/**'
   ],
   move: {
-    'gitignore': '.gitignore'
+    'gitignore': '.gitignore',
+    'template/gitignore': 'template/.gitignore'
   },
   showTip: true,
   gitInit: true,

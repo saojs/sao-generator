@@ -28,6 +28,9 @@ module.exports = {
       store: true
     }
   },
+  move: {
+    'gitignore': '.gitignore'
+  },
   showTip: true,
   gitInit: true,
   installDependencies: true
