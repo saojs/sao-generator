@@ -12,16 +12,16 @@ yarn global add sao
 npm i -g sao
 ```
 
-### From git
-
-```bash
-sao <%= username %>/<%= name %> my-project
-```
-
 ### From npm
 
 ```bash
 sao <%= name.replace('template-', '') %> my-project
+```
+
+### From git
+
+```bash
+sao <%= username %>/<%= name %> my-project
 ```
 
 ## License

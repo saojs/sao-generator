@@ -1,0 +1,25 @@
+<% const lockFile = _.pm === 'yarn' ? 'yarn.lock' : 'package-lock.json' -%>
+version: 2
+jobs:
+  build:
+    working_directory: ~/project
+    docker:
+      - image: circleci/node:latest
+    branches:
+      ignore:
+        - gh-pages # list of branches to ignore
+        - /release\/.*/ # or ignore regexes
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "<%= lockFile %>" }}
+      - run:
+          name: install dependences
+          command: <%= _.pm %> install
+      - save_cache:
+          key: dependency-cache-{{ checksum "<%= lockFile %>" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: test
+          command: <%= _.pm %> test
