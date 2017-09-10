@@ -1,6 +1,6 @@
 {
   "name": "template-template",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Scaffold out an SAO template",
   "main": "index.js",
   "repository": {
