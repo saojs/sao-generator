@@ -9,7 +9,7 @@
   "author": "<%= username %> <<%= email %>> (<%= website %>)",
   "license": "MIT",
   "files": [
-    "sao.js",
+    "saofile.js",
     "template"
   ],
   "scripts": {
@@ -20,6 +20,6 @@
   },
   "devDependencies": {
     "ava": "^0.21.0",
-    "sao": "^0.22.1"
+    "sao": "^1.0.0"
   }
 }

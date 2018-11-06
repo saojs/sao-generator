@@ -15,7 +15,7 @@ npm i -g sao
 ### From npm
 
 ```bash
-sao <%= name.replace('template-', '') %> my-project
+sao <%= name.replace('sao-', '') %> my-project
 ```
 
 ### From git

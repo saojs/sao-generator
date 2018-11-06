@@ -1,4 +1,4 @@
-<% const lockFile = _.pm === 'yarn' ? 'yarn.lock' : 'package-lock.json' -%>
+<% const lockFile = context.npmClient === 'yarn' ? 'yarn.lock' : 'package-lock.json' -%>
 version: 2
 jobs:
   build:
@@ -15,11 +15,11 @@ jobs:
           key: dependency-cache-{{ checksum "<%= lockFile %>" }}
       - run:
           name: install dependences
-          command: <%= _.pm %> install
+          command: <%= context.npmClient %> install
       - save_cache:
           key: dependency-cache-{{ checksum "<%= lockFile %>" }}
           paths:
             - ./node_modules
       - run:
           name: test
-          command: <%= _.pm %> test
+          command: <%= context.npmClient %> test

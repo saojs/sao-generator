@@ -1,14 +1,14 @@
 {
-  "name": "template-template",
+  "name": "sao-generator",
   "version": "0.9.1",
-  "description": "Scaffold out an SAO template",
+  "description": "Scaffold out an SAO generator",
   "main": "index.js",
   "repository": {
-    "url": "egoist/template-template",
+    "url": "saojs/sao-generator",
     "type": "git"
   },
   "scripts": {
-    "test": "ava test/test*.js"
+    "test": "ava"
   },
   "author": "EGOIST <0x142857@gmail.com>",
   "license": "MIT",
@@ -17,6 +17,6 @@
   },
   "devDependencies": {
     "ava": "^0.21.0",
-    "sao": "^0.20.8"
+    "sao": "^1.0.0"
   }
 }
