@@ -1,10 +1,10 @@
-# template
+# sao-generator
 
-A template for scaffolding out an SAO template.
+A generator for scaffolding out a SAO generator.
 
 ## Features
 
-- Bare minimal template
+- Bare minimal generator
 - Unit test with [AVA](https://ava.li)
 
 ## Usage
@@ -20,13 +20,13 @@ npm i -g sao
 ### From npm
 
 ```bash
-sao template template-name
+sao generator sao-name
 ```
 
 ### From repo
 
 ```bash
-sao egoist/template-template template-name
+sao saojs/sao-generator sao-name
 ```
 
 ## License
