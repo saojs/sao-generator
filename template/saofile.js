@@ -22,7 +22,7 @@ module.exports = {
         store: true
       },
       {
-        name: 'email'
+        name: 'email',
         message: 'What is your email?',
         default: this.gitUser.email,
         store: true
