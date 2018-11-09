@@ -5,7 +5,7 @@ module.exports = {
     return [
       {
         name: 'name',
-        message: 'What is the name of the new generator (must be sao-*)',
+        message: 'What is the name of the new project',
         default: this.outFolder,
         filter: val => val.toLowerCase()
       },
