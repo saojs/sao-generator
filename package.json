@@ -1,6 +1,6 @@
 {
   "name": "sao-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Scaffold out an SAO generator",
   "files": [
     "saofile.js",
