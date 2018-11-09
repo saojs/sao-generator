@@ -6,7 +6,7 @@ module.exports = {
       {
         name: 'name',
         message: 'What is the name of the new generator (must be sao-*)',
-        default: `sao-${this.outFolder}`,
+        default: `sao-${this.outFolder.replace(/^sao-/, '')}`,
         filter: val => val.toLowerCase(),
         validate: val => val.startsWith('sao-')
       },
